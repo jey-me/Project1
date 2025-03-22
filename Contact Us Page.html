@@ -31,8 +31,8 @@
           </div>
           <ul class="nav-links">
             <li><a href="/index.html">Home</a></li>
-            <li><a href="/Projects.html">Projects</a></li>
-            <li><a href="#services">Services</a></li>
+            <li><a href="/index.html#projects">Projects</a></li>
+            <li><a href="/index.com#services">Services</a></li>
           </ul>
           <a href="/Contact Us Page.html" class="btn">Contact Us</a>
         </nav>
@@ -40,24 +40,48 @@
     </header>
 
 <body>
-<section class="contact">
-<div class="container">
-  <div class="contact-form">
-    <h1>Contact Us</h1>
-    <form>
-      <p>Full Name*</p>
-      <input class="form-input" type="text" placeholder="Enter your full name" required>
-      <p>Email</p>
-      <input class="form-input" type="email" placeholder="Enter your email address" required>
-      <p>Phone</p>
-      <input class="form-input" type="tel" placeholder="Enter your phone number" required>
-      <p>Message</p>
-      <textarea class="form-input" type="text" placeholder="Write your message here ...." required></textarea>
-      <button type="submit">Submit</button>
-    </form>
-  </div>
-  </div>
+  <section class="contact">
+    <div class="container">
+      <div class="contact-form">
+        <h1>Contact Us</h1>
+        <form id="contactForm" onsubmit="return validateForm()">
+          <p>Full Name</p>
+          <input class="form-input" type="text" placeholder="Enter your full name">
+          <p>Email*</p>
+          <input class="form-input" type="email" placeholder="Enter your email address" required>
+          <p>Phone</p>
+          <input class="form-input" type="tel" placeholder="Enter your phone number">
+          <p>Message*</p>
+          <textarea class="form-input" placeholder="Write your message here ...." required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
   </section>
+  
+  <script>
+    function validateForm() {
+      const emailField = document.querySelector('input[type="email"]');
+      const messageField = document.querySelector('textarea');
+      
+      // Verificar si el campo de email está vacío
+      if (emailField.value.trim() === "") {
+        alert("Por favor, ingresa tu correo electrónico.");
+        return false; // Evita que el formulario se envíe
+      }
+  
+      // Verificar si el campo de mensaje está vacío
+      if (messageField.value.trim() === "") {
+        alert("Escríbenos un mensaje para darte una respuesta.");
+        return false; // Evita que el formulario se envíe
+      }
+  
+      // Si todo es correcto, mostrar mensaje de agradecimiento
+      alert("Gracias, entraremos en contacto contigo pronto.");
+      return true; // Permite que el formulario se envíe
+    }
+  </script>
+  
 
   <footer class="footer-section">
     <div class="footer-container">
