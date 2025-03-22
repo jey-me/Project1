@@ -341,7 +341,7 @@ deberia crear un container standard?
 }
 
 .project-card img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   margin-bottom: 20px;
   object-fit: cover;
