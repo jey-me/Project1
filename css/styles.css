@@ -679,11 +679,19 @@ input::placeholder {
 
 /* Contact Form Styles */
 .contact-form {
-
+  margin-top: 4vw ;
+  margin-bottom: 6vw;
 }
+
+@media (max-width: 768px) {
+  .contact-form {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
 
 .contact-form h1 {
   margin-bottom: 30px;
+}
 }
 
 .contact-form input,
